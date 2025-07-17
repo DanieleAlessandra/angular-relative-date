@@ -31,11 +31,6 @@ export default function relativeDateFilter ($injector, _now, relativeDateTransla
 
     delta = calculateDelta(now, date)
 
-    if (delta > day && delta < week) {
-      date = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0, 0)
-      delta = calculateDelta(now, date)
-    }
-
     const translate = (translatePhrase, timeValue) => {
       var translateKey
 
